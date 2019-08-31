@@ -5,7 +5,7 @@ using UnityEngine;
 public class Rocket : MonoBehaviour {
 
     Rigidbody rdb;
-    public int SPEEDFACTOR = 6000;
+    public int SPEEDFACTOR = 4000;
     public int ORIGINE = 1;
 
 	// Use this for initialization
@@ -21,6 +21,8 @@ public class Rocket : MonoBehaviour {
         {
             rdb.AddRelativeForce(new Vector3(Input.GetAxis("Jump") * SPEEDFACTOR * Time.deltaTime, 0,0));
         }
+
+        print(Input.GetAxis("Jump"));
 
         if (Input.GetAxis("Horizontal") != 0)
         {
